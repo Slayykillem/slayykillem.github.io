@@ -1,0 +1,135 @@
+      margin:0;
+      background:#000;
+      color:#0ff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      line-height:1.55;
+      padding:28px 16px 90px;
+    }
+    main{ max-width:760px; margin:0 auto; }
+
+    h1{ margin:0 0 10px; font-size:30px; letter-spacing:.5px; }
+    p{ margin:10px 0; }
+
+    a{ color:#0ff; text-decoration:underline; text-underline-offset:2px; }
+    a:hover{ opacity:.85; }
+
+    .mono{ font-size:14px; }
+
+    .section{
+      margin:18px 0;
+      padding:14px 14px;
+      border:1px solid rgba(0,255,255,.28);
+      background:rgba(0,255,255,.04);
+    }
+
+    .section-title{
+      margin:0 0 10px;
+      font-size:13px;
+      color:#7ff;
+      opacity:.95;
+      letter-spacing:.3px;
+    }
+
+    details{
+      border:1px solid rgba(0,255,255,.22);
+      background:rgba(0,255,255,.03);
+      padding:10px 12px;
+    }
+    summary{ cursor:pointer; color:#7ff; list-style:none; }
+    summary::-webkit-details-marker{ display:none; }
+
+    .xmr-addr{
+      display:block;
+      max-width:100%;
+      overflow-wrap:anywhere;
+      font-style:italic;
+      padding:6px 0;
+    }
+
+    .rant{
+      white-space:pre-wrap;
+      margin:0;
+    }
+
+    footer{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      padding:10px 16px;
+      background:#000;
+      border-top:1px solid rgba(0,255,255,.35);
+      color:#7ff;
+      font-size:13px;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Slayykillem</h1>
+
+    <p>Slayy</p>
+
+    <div class="section">
+      <div class="section-title">Socials</div>
+      <p><a href="https://instagram.com/slayy.i2p" target="_blank" rel="noreferrer">Instagram</a></p>
+      <p><a href="https://www.youtube.com/@slayykillem" target="_blank" rel="noreferrer">Youtube</a></p>
+      <p><a href="https://xmrbazaar.com/user/Slayykillem" target="_blank" rel="noreferrer">Xmrbazaar</a></p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Kontact</div>
+      <p><a href="https://smp17.simplex.im/a#JVglbcxOIaUVQojocYegCHmsI5s9JXkoVNyYLDNWeus" target="_blank" rel="noreferrer">Simplex (main)</a></p>
+      <p><a href="mailto:slayyuh@cock.li">Email (main)</a></p>
+      <p><a href="mailto:Slayy@mail.i2p">Email (i2p only)</a></p>
+      <p><a href="https://keys.openpgp.org/search?q=slayyuh@cock.li" target="_blank" rel="noreferrer">Pgp</a></p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">donate (xmr)</div>
+      <span class="xmr-addr mono" id="xmr">45PHgcUZY1xRKiFK7ez4pseWLZTMkXBYRLMJq72wt49yBjVYjaqSLfqejNwRvnfw7H1GiZ6y7yH82Ywsvp21T5zw6zLnz8X</span>
+      <p><a href="#" onclick="copyXMR(); return false;">copy address</a></p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">communities</div>
+
+      <p>
+        <a href="https://smp6.simplex.im/g#22m1isJopSZTPvLhE9qo6zAFy7SMrIbNxnwafCycXqk" target="_blank" rel="noreferrer">
+          WetwareEXE (simplex groupchat)
+        </a>
+      </p>
+
+      <details>
+        <summary>Click me</summary>
+        <p class="rant mono" id="wetwareRant">
+          A space for biohacking, human augmentation, neurotechnology, DIY biology, transhumanism, and the intersection of biology and technology
+          This is unrelated to PunkGang.net so anybody can get perms if I like you enough.
+        </p>
+      </details>
+
+      <p>
+        <a href="https://punkgang.net" target="_blank" rel="noreferrer">
+          Punk Gang (collective)
+        </a>
+      </p>
+
+      <details>
+        <summary>Click me</summary>
+        <p class="rant mono" id="punkgangRant">
+          This is where all the real Cyberpunk's hang out. No LARP shit. 
+        </p>
+      </details>
+    </div>
+  </main>
+
+  <footer>© Slayykillem</footer>
+
+  <script>
+    function copyXMR(){
+      const xmr = document.getElementById("xmr").textContent.trim();
+      navigator.clipboard.writeText(xmr).then(() => alert("xmr address copied"));
+    }
+  </script>
+</body>
+</html>
